@@ -1,0 +1,13 @@
+1. В GitHub открой свой репозиторий.
+2. Нажми Add file -> Upload files.
+3. Загрузи package.json и capacitor.config.js из этой папки.
+4. Нажми Add file -> Create new file.
+5. В поле имени файла напиши: .github/workflows/android.yml
+6. Открой android.yml из этой папки, скопируй весь текст и вставь в GitHub.
+7. Нажми Commit changes.
+8. Открой Actions.
+9. Выбери Build 100 DAYS FIT APK.
+10. Нажми Run workflow -> Run workflow.
+11. После зелёной галочки открой запуск.
+12. Внизу нажми Artifact 100-DAYS-FIT-APK.
+13. Распакуй скачанный ZIP — внутри app-debug.apk.
