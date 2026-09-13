@@ -37,6 +37,25 @@ jobs:
         run: |
           npm install @capacitor/core @capacitor/cli @capacitor/android
 
+      - name: Prepare web assets
+        run: |
+          mkdir -p www
+          if [ ! -f www/index.html ]; then
+            cat > www/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>100 DAYS FIT</title>
+          </head>
+          <body>
+            <h1>100 DAYS FIT</h1>
+          </body>
+          </html>
+          EOF
+          fi
+
       - name: Create Android project
         run: |
           if [ ! -d "android" ]; then
@@ -63,5 +82,4 @@ jobs:
           name: 100-days-fit-apk
           path: |
             android/app/build/outputs/apk/**/*.apk
-            android/app/build/outputs/apk/**/*.APK
           if-no-files-found: error
